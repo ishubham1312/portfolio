@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           viewport={{ once: true }}
           className="text-gray-500 text-sm mt-2"
         >
-          © 2024 All rights reserved.
+         {new Date().getFullYear()} © All rights reserved.
         </motion.p>
       </div>
     </footer>

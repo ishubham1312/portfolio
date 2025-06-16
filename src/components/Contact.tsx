@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Instagram, Send, Youtube, Twitter, X } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -51,56 +51,86 @@ const Contact: React.FC = () => {
             <div className="bg-gray-900/50 backdrop-blur-md rounded-xl p-6 shadow-xl border border-gray-800">
               <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
               
-              <div className="space-y-4">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 border border-gray-700"
+              <div className="flex flex-wrap justify-center gap-4">
+                <motion.a
+                  href="mailto:ishubham1312@gmail.com"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-200"
+                  title="Email: ishubham1312@gmail.com"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <Mail size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Email</p>
-                    <a href="mailto:ishubham1312@bhu.ac.in" className="text-white hover:text-purple-300 transition-colors duration-200">
-                      ishubham1312@bhu.ac.in
-                    </a>
-                  </div>
-                </motion.div>
+                  <Mail size={24} className="text-white" />
+                </motion.a>
 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 border border-gray-700"
+                <motion.a
+                  href="tel:+919170003039"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-green-500/20 transition-all duration-200"
+                  title="Phone: +91 91700 03039"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-                    <Phone size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <a href="tel:+919170003039" className="text-white hover:text-purple-300 transition-colors duration-200">
-                      +91 91700 03039
-                    </a>
-                  </div>
-                </motion.div>
+                  <Phone size={24} className="text-white" />
+                </motion.a>
 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 border border-gray-700"
+                <motion.a
+                  href="https://www.linkedin.com/in/ishubham1312/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200"
+                  title="LinkedIn Profile"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center">
-                    <Linkedin size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">LinkedIn</p>
-                    <a 
-                      href="https://linkedin.in/ishubham1312" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-purple-300 transition-colors duration-200"
-                    >
-                      linkedin.in/ishubham1312
-                    </a>
-                  </div>
-                </motion.div>
+                  <Linkedin size={24} className="text-white" />
+                </motion.a>
+
+                <motion.a
+                  href="https://github.com/ishubham1312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-gray-500/20 transition-all duration-200"
+                  title="GitHub Profile"
+                >
+                  <Github size={24} className="text-white" />
+                </motion.a>
+
+                <motion.a
+                  href="https://www.instagram.com/ishubham1312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-200"
+                  title="Instagram Profile"
+                >
+                  <Instagram size={24} className="text-white" />
+                </motion.a>
+
+                <motion.a
+                  href="https://www.youtube.com/@ishubham1312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-red-600 to-red-800 rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-red-500/20 transition-all duration-200"
+                  title="YouTube Channel"
+                >
+                  <Youtube size={24} className="text-white" />
+                </motion.a>
+
+                <motion.a
+                  href="https://x.com/Shubham99925933"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 bg-gradient-to-r from-gray-800 to-black rounded-xl flex items-center justify-center hover:shadow-lg hover:shadow-gray-500/20 transition-all duration-200"
+                  title="X (Twitter) Profile"
+                >
+                  <X size={24} className="text-white" />
+                </motion.a>
               </div>
             </div>
           </motion.div>
