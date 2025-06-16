@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, GitBranch, Database, Palette, Zap } from 'lucide-react';
+import { Code, GitBranch, Database, Palette, Zap, Camera } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: "Web Development",
       icon: <Code size={24} />,
-      skills: ["HTML", "CSS", "JavaScript", "React"],
+      skills: ["HTML", "CSS", "JavaScript", "React", "Firebase Studio"],
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -25,15 +25,22 @@ const Skills: React.FC = () => {
     {
       title: "Design Tools",
       icon: <Palette size={24} />,
-      skills: ["Figma", "Canva", "Adobe Illustrator"],
+      skills: ["Figma", "Canva", "Adobe Illustrator" ,"PicsArt"],
       color: "from-pink-500 to-rose-500"
+    },
+     {
+      title: "Photography",
+      icon: <Camera size={24} />, // Changed to Camera icon
+      skills: ["People Portrait", "Astrophotography", "Animal Photography", "Product Photography"],
+      color: "from-indigo-500 to-purple-500"
     },
     {
       title: "Other Skills",
       icon: <Zap size={24} />,
       skills: ["Responsive Design", "Troubleshooting", "UI/UX", "AI Prompts", "Vibe Coder"],
       color: "from-orange-500 to-yellow-500"
-    }
+    },
+   
   ];
 
   return (

@@ -69,16 +69,14 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="relative"
+            className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-400 p-1 bg-gradient-to-r from-blue-400 to-purple-400"
           >
-            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-400 p-1 bg-gradient-to-r from-blue-400 to-purple-400">
-              <div className="w-full h-full rounded-full overflow-hidden bg-gray-800">
-                <img
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Shubham Yadav"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="w-full h-full rounded-full overflow-hidden bg-gray-800">
+              <img
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Shubham Yadav"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Floating elements around profile */}
             <motion.div
@@ -108,7 +106,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+              className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
               style={{ fontFamily: 'Sora', fontWeight: 600 }}
             >
               Shubham Yadav
