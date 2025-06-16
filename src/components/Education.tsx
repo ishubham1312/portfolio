@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, School, BookOpen, BookMarked, Award } from 'lucide-react';
 
 const Education: React.FC = () => {
   const educationData = [
@@ -64,9 +64,17 @@ const Education: React.FC = () => {
             >
               <div className="flex flex-col items-center text-center">
                 <div className="flex-shrink-0 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <GraduationCap size={24} className="text-white" />
-                  </div>
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center ${
+                  item.type === 'Masters' ? 'bg-gradient-to-br from-purple-600 to-blue-500' :
+                  item.type === 'Bachelors' ? 'bg-gradient-to-br from-blue-500 to-cyan-400' :
+                  item.type === 'Diploma' ? 'bg-gradient-to-br from-amber-500 to-orange-500' :
+                  'bg-gradient-to-br from-green-500 to-teal-400'
+                }`}>
+                  {item.type === 'Masters' && <GraduationCap size={28} className="text-white" />}
+                  {item.type === 'Bachelors' && <School size={28} className="text-white" />}
+                  {item.type === 'Diploma' && <BookOpen size={28} className="text-white" />}
+                  {item.type === 'Secondary' && <BookMarked size={28} className="text-white" />}
+                </div>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">

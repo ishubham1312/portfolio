@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, Video, Image, Users } from 'lucide-react';
+import { Calendar} from 'lucide-react';
+import pristine from '../../public/1.png';
+import clarity from '../../public/2.png';
+import bee from '../../public/bee.png';
 
 const Internships: React.FC = () => {
   const experiences = [
@@ -64,16 +67,16 @@ const Internships: React.FC = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${
-                    experience.company === 'Pristine Classes (YouTube)' ? 'from-blue-500 to-purple-600' :
-                    experience.company === 'Bee Food Pvt. Ltd.' ? 'from-yellow-500 to-orange-600' :
-                    experience.role === 'HR Executive Intern' ? 'from-green-500 to-teal-600' :
-                    'from-purple-500 to-pink-600'
-                  } rounded-full flex items-center justify-center`}>
-                    {experience.company === 'Pristine Classes (YouTube)' && <Video size={24} className="text-white" />}
-                    {experience.company === 'Bee Food Pvt. Ltd.' && <Image size={24} className="text-white" />}
-                    {experience.role === 'HR Executive Intern' && <Users size={24} className="text-white" />}
-                    {experience.company === 'Clarity Research Pvt. Ltd.' && experience.role !== 'HR Executive Intern' && <Briefcase size={24} className="text-white" />}
+                  <div className="w-20 h-20 rounded-full overflow-hidden">
+                    {experience.company === 'Pristine Classes (YouTube Channel)' && (
+                      <img src={clarity} alt="Pristine Classes" className="w-full h-full object-cover" />
+                    )}
+                    {experience.company === 'Bee Food Pvt. Ltd.' && (
+                      <img src={bee} alt="Bee Food Pvt. Ltd." className="w-full h-full object-cover" />
+                    )}
+                    {experience.company === 'Clarity by WeHeal' && (
+                      <img src={pristine} alt="Clarity by WeHeal" className="w-full h-full object-cover" />
+                    )}
                   </div>
                 </div>
                 <div className="flex-1">
