@@ -6,10 +6,18 @@ const Internships: React.FC = () => {
   const experiences = [
     {
       company: "Pristine Classes (YouTube)",
-      role: "Graphic Designer",
+      role: "Graphic Designer & Video Editor",
       duration: "Currently Working",
       description: "Creating engaging visual content, thumbnails, and promotional materials for educational YouTube channel",
       status: "current"
+    },
+     {
+      company: "Bee Food Pvt. Ltd.",
+      role: "Freelancer Graphic Designer",
+      duration: "2 Month", 
+      description: "Creating engaging visual content, and promotional materials for social media and marketing campaigns for the Startup",
+      status: "completed",
+     
     },
     {
       company: "Clarity Research Pvt. Ltd.",
@@ -42,7 +50,7 @@ const Internships: React.FC = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {experiences.map((experience, index) => (
             <motion.div
               key={index}
@@ -69,7 +77,7 @@ const Internships: React.FC = () => {
                       {experience.role}
                     </h3>
                     {experience.status === 'current' && (
-                      <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm border border-green-500/30">
+                      <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs border border-green-500/30">
                         Current
                       </span>
                     )}
