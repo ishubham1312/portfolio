@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, Calendar, Video, Image, Users } from 'lucide-react';
 
 const Internships: React.FC = () => {
   const experiences = [
     {
-      company: "Pristine Classes (YouTube)",
+      company: "Pristine Classes (YouTube Channel)",
       role: "Graphic Designer & Video Editor",
       duration: "Currently Working",
       description: "Creating engaging visual content, thumbnails, and promotional materials for educational YouTube channel",
@@ -18,21 +18,22 @@ const Internships: React.FC = () => {
       description: "Creating engaging visual content, and promotional materials for social media and marketing campaigns for the Startup",
       status: "completed",
      
-    },
+    }, 
     {
-      company: "Clarity Research Pvt. Ltd.",
-      role: "Marketing Research Intern",
-      duration: "1 Month",
-      description: "Market surveys, user data analysis, reports",
-      status: "completed"
-    },
-    {
-      company: "Clarity Research Pvt. Ltd.",
+      company: "Clarity by WeHeal",
       role: "HR Executive Intern",
       duration: "1 Month", 
       description: "Recruitment assistance, communication support",
       status: "completed"
+    },
+    {
+      company: "Clarity by WeHeal",
+      role: "Marketing Research Intern",
+      duration: "1 Month",
+      description: "Market surveys, user data analysis, reports",
+      status: "completed"
     }
+   
   ];
 
   return (
@@ -64,11 +65,15 @@ const Internships: React.FC = () => {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className={`w-12 h-12 bg-gradient-to-r ${
-                    experience.status === 'current' 
-                      ? 'from-green-500 to-emerald-600' 
-                      : 'from-purple-500 to-pink-600'
+                    experience.company === 'Pristine Classes (YouTube)' ? 'from-blue-500 to-purple-600' :
+                    experience.company === 'Bee Food Pvt. Ltd.' ? 'from-yellow-500 to-orange-600' :
+                    experience.role === 'HR Executive Intern' ? 'from-green-500 to-teal-600' :
+                    'from-purple-500 to-pink-600'
                   } rounded-full flex items-center justify-center`}>
-                    <Briefcase size={24} className="text-white" />
+                    {experience.company === 'Pristine Classes (YouTube)' && <Video size={24} className="text-white" />}
+                    {experience.company === 'Bee Food Pvt. Ltd.' && <Image size={24} className="text-white" />}
+                    {experience.role === 'HR Executive Intern' && <Users size={24} className="text-white" />}
+                    {experience.company === 'Clarity Research Pvt. Ltd.' && experience.role !== 'HR Executive Intern' && <Briefcase size={24} className="text-white" />}
                   </div>
                 </div>
                 <div className="flex-1">
