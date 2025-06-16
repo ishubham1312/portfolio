@@ -62,7 +62,8 @@ const Header: React.FC = () => {
           isVisible || isHovered || window.location.hash === '#home' ? 0 : -20,
       }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/50"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md"
+      style={{ backgroundColor: 'rgb(0 0 0 / 15%)' }}
       onMouseEnter={() => setIsHovered(true)}
     >
       <nav className="container mx-auto px-6 py-4 flex justify-center items-center space-x-8 text-lg">
@@ -70,7 +71,7 @@ const Header: React.FC = () => {
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-white"
+          className="md:hidden text-white absolute left-6"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </motion.button>

@@ -17,19 +17,19 @@ const Education: React.FC = () => {
       type: "Bachelors"
     },
     {
-      degree: "Diploma in Computer Applications",
+      degree: "Under Graduate Diploma in Computer Applications",
       institution: "Banaras Hindu University",
       period: "2019–2022",
       type: "Diploma"
     },
     {
-      degree: "Class 12",
+      degree: "Intermediate",
       institution: "Swami Harsewanand Public School",
       period: "2019",
       type: "Secondary"
     },
     {
-      degree: "Class 10",
+      degree: "High School",
       institution: "Swami Harsewanand Public School",
       period: "2017",
       type: "Secondary"
@@ -46,7 +46,7 @@ const Education: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-poppins">
             Education
           </h2>
         </motion.div>
