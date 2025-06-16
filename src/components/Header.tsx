@@ -71,6 +71,8 @@ const Header: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-white"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </motion.button>
 
         {/* Mobile Navigation */}
