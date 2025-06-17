@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, Github, Instagram, Send, Youtube, Twitter, X } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Instagram, Send, Youtube, X } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

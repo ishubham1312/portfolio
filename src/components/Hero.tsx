@@ -5,7 +5,7 @@ import { Download, Mail } from 'lucide-react';
 const Hero: React.FC = () => {
   const titles = [
     "Web Developer",
-    "React Enthusiast", 
+    "Vibe Coder", 
     "Library Technologist",
     "Creative Designer",
     "Problem Solver",
@@ -73,9 +73,13 @@ const Hero: React.FC = () => {
           >
             <div className="w-full h-full rounded-full overflow-hidden bg-gray-800">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/photo1.png"
                 alt="Shubham Yadav"
                 className="w-full h-full object-cover"
+                style={{ 
+                  objectPosition: 'center 55%',
+                  transform: 'scale(1.2)'
+                }}
               />
             </div>
             {/* Floating elements around profile */}
@@ -131,8 +135,7 @@ const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <motion.a
-                href="/SHUBHAM-RESUME.pdf"
-                download
+                href="/SHUBHAM-RESUME.pdf" download="SHUBHAM-RESUME.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, School, BookOpen, BookMarked, Award } from 'lucide-react';
+import { GraduationCap, School, BookOpen, BookMarked,} from 'lucide-react';
 
 const Education: React.FC = () => {
   const educationData = [
