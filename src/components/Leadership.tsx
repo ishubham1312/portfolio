@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award } from 'lucide-react';
+import libfest25 from '../../public/libfest25.png';
+import facet from '../../public/facet.png';
 
 const Leadership: React.FC = () => {
   const activities = [
@@ -8,13 +9,15 @@ const Leadership: React.FC = () => {
       role: "Coordinator",
       organization: "Facet Literacy Club",
       department: "Department of Library & Information Science, B.H.U.",
-      description: ""
+      description: "Literary Club of Dept. of Library & Information Science, Banaras Hindu University",
+      logo: "/facet.png"
     },
     {
       role: "Organizer",
       organization: "Libfest25",
       department: "Department of Library & Information Science, B.H.U.",
-      description: "Organized Libfest25 in April 2025 at Department of Library & Information Science, B.H.U."
+      description: "Organized Libfest25 in April 2025 at Department of Library & Information Science, B.H.U.",
+      logo: "/libfest25.png"
     }
   ];
 
@@ -28,42 +31,61 @@ const Leadership: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 
+            className="text-3xl md:text-4xl mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+            style={{ fontFamily: 'Sora', fontWeight: 800 }}
+          >
             Leadership & Co-Curricular Activities
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {activities.map((activity, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-lg border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 h-full"
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="bg-gradient-to-br from-purple-500 to-blue-500 p-3 rounded-lg flex-shrink-0">
-                  <Award className="w-6 h-6 text-white" />
+              <div className="flex flex-col h-full">
+                <div className="flex items-start gap-5">
+                  <div className="relative flex-shrink-0 w-20 h-20 overflow-hidden">
+                    {activity.organization === 'Facet Literacy Club' && (
+                      <img 
+                        src={facet} 
+                        alt="Facet Literacy Club" 
+                        className="w-full h-full object-contain"
+                      />
+                    )}
+                    {activity.organization === 'Libfest25' && (
+                      <img 
+                        src={libfest25} 
+                        alt="Libfest25" 
+                        className="w-full h-full object-contain"
+                      />
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-purple-500/10 text-purple-300 rounded-full mb-2">
+                      {activity.role}
+                    </span>
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {activity.organization}
+                    </h3>
+                    <p className="text-purple-200 font-medium text-sm mb-2">
+                      {activity.department}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">
-                    {activity.role}
-                  </h3>
-                  <p className="text-purple-300 font-medium mb-2">
-                    {activity.organization}
-                  </p>
-                  <p className="text-gray-400 text-sm mb-3">
-                    {activity.department}
-                  </p>
-                  {activity.description && (
-                    <p className="text-gray-300">
+                {activity.description && (
+                  <div className="mt-4 pt-4 border-t border-gray-700/50">
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       {activity.description}
                     </p>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

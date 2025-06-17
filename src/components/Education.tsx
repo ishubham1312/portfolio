@@ -46,7 +46,9 @@ const Education: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-poppins">
+        <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+          style={{ fontFamily: 'Sora', fontWeight: 800 }}
+          >
             Education
           </h2>
         </motion.div>
