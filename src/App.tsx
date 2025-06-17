@@ -1,5 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
 import AnimatedBackground from './components/AnimatedBackground';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -7,6 +5,7 @@ import About from './components/About';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Internships from './components/Internships';
+import Leadership from './components/Leadership';
 import Projects from './components/Projects';
 import Interests from './components/Interests';
 import Contact from './components/Contact';
@@ -26,6 +25,7 @@ function App() {
           <Education />
           <Skills />
           <Internships />
+          <Leadership />
           <Projects />
           <Interests />
           <Contact />
