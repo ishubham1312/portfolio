@@ -33,7 +33,7 @@ const Leadership: React.FC = () => {
         >
           <h2 
             className="text-3xl md:text-4xl mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
-            style={{ fontFamily: 'Sora', fontWeight: 800 }}
+            style={{ fontFamily: 'Sora', fontWeight: 900 }}
           >
             Leadership & Co-Curricular Activities
           </h2>
