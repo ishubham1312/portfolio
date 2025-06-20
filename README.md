@@ -34,6 +34,12 @@ This project is a showcase of who I am, what I do, and the skills and projects I
    ```bash
    git clone https://github.com/ishubham1312/portfolio.git
 2. **Install NPM via terminal**
-    `npm install`
-3. **Run a Development Server**
+   ```bash
+    npm install
+4. **Run a Development Server**
+   ```bash
    `npm run dev`
+5.**Build for Production**
+   ```bash
+  npm run build
+
