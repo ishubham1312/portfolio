@@ -142,24 +142,29 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.8 }}
               className="h-16 md:h-20 flex items-center justify-center mb-12"
             >
-              <span className="text-xl md:text-2xl lg:text-3xl text-gray-300 inline-flex items-center">
-                {displayedText}
+              <div className="relative inline-block">
+                <span className="text-xl md:text-2xl lg:text-3xl text-gray-300">
+                  {displayedText}
+                </span>
                 <motion.span
-                  className="inline-block w-1 h-8 bg-blue-400 ml-1"
-                  initial={{ opacity: 1 }}
-                  animate={{ 
-                    opacity: [0, 1, 1, 0],
-                    scale: [0.8, 1, 1, 0.8]
+                  className="inline-block w-[2px] h-8 bg-white ml-1"
+                  animate={{
+                    opacity: [0, 1, 0],
                   }}
-                  transition={{ 
-                    duration: 1.5, 
-                    repeat: Infinity, 
-                    repeatType: "loop",
-                    ease: "ease-in-out",
-                    times: [0, 0.1, 0.9, 1]
+                  transition={{
+                    duration: 0.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    repeatType: "reverse"
+                  }}
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    marginLeft: '2px'
                   }}
                 />
-              </span>
+              </div>
             </motion.div>
 
             <motion.div
