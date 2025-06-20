@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
+    <section id="home" className="h-16 min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="container mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,14 +84,34 @@ const Hero: React.FC = () => {
             </div>
             {/* Floating elements around profile */}
             <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-80"
+              animate={{ 
+                rotate: 360,
+                scale: [1, 1.1, 1],
+                y: [0, -10, 0]
+              }}
+              transition={{ 
+                duration: 20, 
+                repeat: Infinity, 
+                ease: "linear",
+                repeatType: "loop"
+              }}
+              className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-80 will-change-transform"
+              style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
             />
             <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full opacity-80"
+              animate={{ 
+                rotate: -360,
+                scale: [1, 1.1, 1],
+                y: [0, 10, 0]
+              }}
+              transition={{ 
+                duration: 15, 
+                repeat: Infinity, 
+                ease: "linear",
+                repeatType: "loop"
+              }}
+              className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full opacity-80 will-change-transform"
+              style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
             />
           </motion.div>
 
@@ -111,7 +131,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-              style={{ fontFamily: 'Sora', fontWeight: 600 }}
+              style={{ fontFamily: 'Sora', fontWeight: 700 }}
             >
               Shubham Yadav
             </motion.h1>
@@ -122,10 +142,50 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.8 }}
               className="h-16 md:h-20 flex items-center justify-center mb-12"
             >
-              <span className="text-xl md:text-2xl lg:text-3xl text-gray-300">
-                {displayedText}
-                <span className="animate-pulse">|</span>
-              </span>
+              <div className="relative inline-flex items-center">
+                <span className="text-xl md:text-2xl lg:text-3xl text-gray-300">
+                  {displayedText}
+                </span>
+                <motion.span
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-8 bg-blue-400"
+                  initial={{ opacity: 1 }}
+                  animate={{
+                    height: ['0%', '80%', '80%', '0%'],
+                    opacity: [0, 1, 1, 0],
+                  }}
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: [0.4, 0, 0.2, 1],
+                    times: [0, 0.1, 0.9, 1],
+                  }}
+                  style={{
+                    transformOrigin: 'center bottom',
+                    willChange: 'transform, opacity, height',
+                  }}
+                />
+                <motion.span
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-6 bg-blue-400"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    height: ['0%', '60%', '60%', '0%'],
+                    opacity: [0, 0.7, 0.7, 0],
+                  }}
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: [0.4, 0, 0.2, 1],
+                    times: [0, 0.1, 0.9, 1],
+                    delay: 0.15
+                  }}
+                  style={{
+                    transformOrigin: 'center top',
+                    willChange: 'transform, opacity, height',
+                  }}
+                />
+              </div>
             </motion.div>
 
             <motion.div
