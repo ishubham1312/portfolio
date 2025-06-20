@@ -38,8 +38,8 @@ This project is a showcase of who I am, what I do, and the skills and projects I
     npm install
 4. **Run a Development Server**
    ```bash
-   `npm run dev`
-5.**Build for Production**
+   npm run dev
+5. **Build for Production**
    ```bash
-  npm run build
+   npm run build
 
