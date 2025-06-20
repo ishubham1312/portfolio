@@ -33,7 +33,7 @@ This project is a showcase of who I am, what I do, and the skills and projects I
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/ishubham1312/portfolio.git
-2. **Install NPM via terminal **
+2. **Install NPM via terminal**
     `npm install`
-3. **Run a Development Server **
+3. **Run a Development Server**
    `npm run dev`
