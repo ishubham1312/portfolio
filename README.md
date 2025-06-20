@@ -5,7 +5,7 @@ This project is a showcase of who I am, what I do, and the skills and projects I
 
 ## 🚀 Live Preview
 
-💼 [Repository Link](https://ishubham1312.github.io/portfolio]
+💼 [Repository Link](https://ishubham1312.github.io/portfolio)
 🖥️ [View Website](https://ishubham1312.netlify.app/) 
 ---
 
