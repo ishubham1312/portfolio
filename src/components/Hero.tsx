@@ -142,50 +142,24 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.8 }}
               className="h-16 md:h-20 flex items-center justify-center mb-12"
             >
-              <div className="relative inline-flex items-center">
-                <span className="text-xl md:text-2xl lg:text-3xl text-gray-300">
-                  {displayedText}
-                </span>
+              <span className="text-xl md:text-2xl lg:text-3xl text-gray-300 inline-flex items-center">
+                {displayedText}
                 <motion.span
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-8 bg-blue-400"
+                  className="inline-block w-1 h-8 bg-blue-400 ml-1"
                   initial={{ opacity: 1 }}
-                  animate={{
-                    height: ['0%', '80%', '80%', '0%'],
+                  animate={{ 
                     opacity: [0, 1, 1, 0],
+                    scale: [0.8, 1, 1, 0.8]
                   }}
-                  transition={{
-                    duration: 1.2,
-                    repeat: Infinity,
+                  transition={{ 
+                    duration: 1.5, 
+                    repeat: Infinity, 
                     repeatType: "loop",
-                    ease: [0.4, 0, 0.2, 1],
-                    times: [0, 0.1, 0.9, 1],
-                  }}
-                  style={{
-                    transformOrigin: 'center bottom',
-                    willChange: 'transform, opacity, height',
+                    ease: "ease-in-out",
+                    times: [0, 0.1, 0.9, 1]
                   }}
                 />
-                <motion.span
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-6 bg-blue-400"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    height: ['0%', '60%', '60%', '0%'],
-                    opacity: [0, 0.7, 0.7, 0],
-                  }}
-                  transition={{
-                    duration: 1.2,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: [0.4, 0, 0.2, 1],
-                    times: [0, 0.1, 0.9, 1],
-                    delay: 0.15
-                  }}
-                  style={{
-                    transformOrigin: 'center top',
-                    willChange: 'transform, opacity, height',
-                  }}
-                />
-              </div>
+              </span>
             </motion.div>
 
             <motion.div
