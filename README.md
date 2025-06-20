@@ -42,15 +42,5 @@ This project is a showcase of who I am, what I do, and the skills and projects I
 5. **Build for Production**
    ```bash
    npm run build
-   
-portfolio/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   └── App.js
-├── package.json
-└── README.md
-
+6. **Enjoy**
 
