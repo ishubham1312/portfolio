@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
       title: "TestGenius",
       description: "AI-powered test generator (React + Gemini API)",
       github: "https://github.com/ishubham1312/testgenius.git",
-      live: "https://test-genius-901303989177.us-west1.run.app/",
+      live: "https://testgenius.netlify.app/",
       image: "/testgenius.jpg"
     },
     {
